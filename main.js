@@ -26,3 +26,13 @@ function linkAction(){
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+function sendMail(){
+      let parms ={
+            name : document.getElementById("name").value,
+            email_id : document.getElementById("email_id").value,
+            comt : document.getElementById("comment").value,
+      }
+
+emailjs.send("service_rmdgybk","template_1jnj5rg",parms).then(alert("successfully sent."))
+}
